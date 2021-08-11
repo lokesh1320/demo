@@ -1,0 +1,28 @@
+{
+    "ff178771-3c5b-f3eb-aea3-d5d6e82675f4": {
+        "dataModelId": "ff178771-3c5b-f3eb-aea3-d5d6e82675f4",
+        "name": "sampledata",
+        "description": "data",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "firstname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "lastname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "age",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            }
+        ]
+    }
+}

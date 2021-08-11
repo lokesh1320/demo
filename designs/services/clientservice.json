@@ -1,0 +1,617 @@
+[
+    {
+        "id": "sd_op1r0fgKYzP55Mwi",
+        "type": "tab",
+        "createdDate": "2021-07-22T07:35:37.192Z",
+        "relativeParentPath": "",
+        "label": "clientservice",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "serviceName": "clientservice"
+    },
+    {
+        "id": "sd_Qw7LCTaWeoM53Eki",
+        "type": "Start",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "startfunction",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "myinput",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "mylocal",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "mynumber",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "startfunction",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 105,
+        "y": 140,
+        "wires": [
+            [
+                "sd_aAz7uclm5byXRnKN"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "clientservice"
+    },
+    {
+        "id": "sd_aAz7uclm5byXRnKN",
+        "type": "Script",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log('script1',bh.input.myinput)\n// console.log('script2',bh.local.mylocal)\n\nbh.local.mylocal = {\n    'id':'@@@@'+bh.input.myinput.id,\n    'password':'@@@@'+bh.input.myinput.password\n}\n\n// throw new Error(\"Error\")",
+        "functionName": "sd_aAz7uclm5byXRnKN",
+        "category": "Function",
+        "__n_excludedFromValidation__": {},
+        "x": 185,
+        "y": 140,
+        "wires": [
+            [
+                "sd_DNXtNBkTFSgaJwnU"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "clientservice"
+    },
+    {
+        "id": "sd_h6deTMTfz45pvjlA",
+        "type": "Log",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "\"data123\"",
+        "functionName": "sd_h6deTMTfz45pvjlA",
+        "category": "General",
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "str",
+                "value": "data123",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "x": 465,
+        "y": 140,
+        "wires": [],
+        "generateNext": true,
+        "serviceName": "clientservice"
+    },
+    {
+        "id": "sd_wAVapChGlYgrYPG9",
+        "type": "Comments",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "comments": "",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 560,
+        "y": 100,
+        "wires": [],
+        "generateNext": true
+    },
+    {
+        "id": "sd_I8bMX510gK4DBqSf",
+        "type": "CallService",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "noerr": 0,
+        "service": {
+            "id": "sd_op1r0fgKYzP55Mwi",
+            "type": "tab",
+            "createdDate": "2021-07-22T07:35:37.192Z",
+            "relativeParentPath": "",
+            "label": "clientservice",
+            "disabled": false,
+            "info": ""
+        },
+        "flow": {
+            "flowId": "sd_EJCanAH9O6gIJ6wW",
+            "flowName": "start2"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "callService": "./clientservice",
+        "startName": "start2",
+        "inputParams": [],
+        "accept_bh": false,
+        "functionName": "sd_I8bMX510gK4DBqSf",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 765,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "generateNext": true
+    },
+    {
+        "id": "sd_EJCanAH9O6gIJ6wW",
+        "type": "Start",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "start2",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "another",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "start2",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 45,
+        "y": 220,
+        "wires": [
+            [
+                "sd_yPZv8g31bScBjBBY"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "clientservice"
+    },
+    {
+        "id": "sd_kPntl7tgrw3jtMK2",
+        "type": "Log",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh.local.another",
+        "functionName": "sd_kPntl7tgrw3jtMK2",
+        "category": "General",
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh.local",
+                "value": "another",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "x": 245,
+        "y": 220,
+        "wires": [],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_yPZv8g31bScBjBBY",
+        "type": "Script",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.another = \"data\"",
+        "functionName": "sd_yPZv8g31bScBjBBY",
+        "category": "Function",
+        "__n_excludedFromValidation__": {},
+        "x": 145,
+        "y": 220,
+        "wires": [
+            [
+                "sd_kPntl7tgrw3jtMK2"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_UzyZFYfrwPivg4wP",
+        "type": "Catch",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "mycatch",
+        "selectedNodes": "all-nodes",
+        "selectCatchType": "allnodes",
+        "masternodeList": "",
+        "ignoreList": [
+            "sd_sa21EI0wxWI1z3Fh"
+        ],
+        "functionName": "mycatch",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 205,
+        "y": 40,
+        "wires": [
+            [
+                "sd_sa21EI0wxWI1z3Fh"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "clientservice"
+    },
+    {
+        "id": "sd_sa21EI0wxWI1z3Fh",
+        "type": "Script",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"exception\")\nconsole.log(bh.error)",
+        "functionName": "sd_sa21EI0wxWI1z3Fh",
+        "category": "Function",
+        "__n_excludedFromValidation__": {},
+        "x": 345,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_35ZbAsAkYj3U7Jgy",
+        "type": "Environment",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh.local",
+                    "value": "myproperty"
+                },
+                "envProperty": "myproperty"
+            },
+            {
+                "flowVar": {
+                    "type": "bh.local",
+                    "value": "ssdURL"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_35ZbAsAkYj3U7Jgy",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 485,
+        "y": 20,
+        "wires": [
+            []
+        ],
+        "generateNext": true
+    },
+    {
+        "id": "sd_iI3qHNnEm4p3POyt",
+        "type": "Navigation",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_iI3qHNnEm4p3POyt",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 685,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "generateNext": true
+    },
+    {
+        "id": "sd_BrK4LH5BKpE2xMNu",
+        "type": "SnackBar",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "mysnack",
+        "message": {
+            "type": "str",
+            "value": "click ok"
+        },
+        "action": {
+            "type": "str",
+            "value": "OK"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "mysnack",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 605,
+        "y": 20,
+        "wires": [
+            []
+        ],
+        "generateNext": true
+    },
+    {
+        "id": "sd_656a8J2p88qQORlL",
+        "type": "Async",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "flowNodes": [
+            {
+                "serviceId": "sd_op1r0fgKYzP55Mwi",
+                "serviceName": "clientservice",
+                "flowId": "sd_EJCanAH9O6gIJ6wW",
+                "flowName": "start2",
+                "functionName": "start2",
+                "inputParams": [],
+                "inputVariables": [],
+                "accept_bh": false,
+                "relativePath": "./clientservice"
+            },
+            {
+                "serviceId": "sd_op1r0fgKYzP55Mwi",
+                "serviceName": "clientservice",
+                "flowId": "sd_vhhbehUIGT49057i",
+                "flowName": "start3",
+                "functionName": "start3",
+                "inputParams": [],
+                "inputVariables": [],
+                "accept_bh": false,
+                "relativePath": "./clientservice"
+            }
+        ],
+        "_flowNodes": [
+            {
+                "serviceId": "sd_op1r0fgKYzP55Mwi",
+                "serviceName": "clientservice",
+                "flowId": "sd_EJCanAH9O6gIJ6wW",
+                "flowName": "start2",
+                "functionName": "start2",
+                "inputParams": [],
+                "inputVariables": [],
+                "accept_bh": false,
+                "relativePath": "./clientservice"
+            },
+            {
+                "serviceId": "sd_op1r0fgKYzP55Mwi",
+                "serviceName": "clientservice",
+                "flowId": "sd_vhhbehUIGT49057i",
+                "flowName": "start3",
+                "functionName": "start3",
+                "inputParams": [],
+                "inputVariables": [],
+                "accept_bh": false,
+                "relativePath": "./clientservice"
+            }
+        ],
+        "resultMapping": "bh.local.result",
+        "functionName": "sd_656a8J2p88qQORlL",
+        "category": "Function",
+        "__ssdTypeInputs__": {
+            "resultMapping": {
+                "type": "bh.local",
+                "value": "result",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "x": 645,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "generateNext": true
+    },
+    {
+        "id": "sd_vhhbehUIGT49057i",
+        "type": "Start",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "start3",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "start3",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 325,
+        "y": 260,
+        "wires": [
+            [
+                "sd_4H9P4e6a5ApaKaF5"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "clientservice"
+    },
+    {
+        "id": "sd_4H9P4e6a5ApaKaF5",
+        "type": "Log",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "\"data3\"",
+        "functionName": "sd_4H9P4e6a5ApaKaF5",
+        "category": "General",
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "str",
+                "value": "data3",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "x": 480,
+        "y": 260,
+        "wires": [],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_gdpbWbV0fRqI1BjU",
+        "type": "CallSSDApi",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlValue": "/getjsondata",
+        "url": "/getjsondata",
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.mylocal",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "mylocal"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "inputVariables": [],
+        "inputParams": [],
+        "functionName": "sd_gdpbWbV0fRqI1BjU",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 305,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "generateNext": true
+    },
+    {
+        "id": "sd_DNXtNBkTFSgaJwnU",
+        "type": "HttpRequest",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "jsondata",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlValue": "https://jsonplaceholder.typicode.com/posts",
+        "urlMappingObj": {},
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.data",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "data"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "jsondata",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 105,
+        "y": 20,
+        "wires": [
+            [
+                "sd_6po39moxMUtkfYm0"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_6po39moxMUtkfYm0",
+        "type": "Log",
+        "z": "sd_op1r0fgKYzP55Mwi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh.local.data",
+        "functionName": "sd_6po39moxMUtkfYm0",
+        "category": "General",
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh.local",
+                "value": "data",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "x": 400,
+        "y": 160,
+        "wires": [],
+        "generateNext": false,
+        "generated": true
+    }
+]

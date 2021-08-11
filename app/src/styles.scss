@@ -1,0 +1,20 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+
+.rowclass{
+    margin-top: 10px;
+
+}
+
+.class1 {
+  border-radius:10px;
+  flex-basis:10%;
+  height:100px;
+}
+.class2 {
+  border-radius:10px;
+  flex-basis:10%;
+  height:100px;
+}

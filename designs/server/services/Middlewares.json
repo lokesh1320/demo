@@ -1,0 +1,171 @@
+[
+    {
+        "id": "ssd_mw_ws",
+        "type": "tab",
+        "createdDate": "createdDate",
+        "relativeParentPath": "",
+        "label": "Middlewares",
+        "disabled": false,
+        "info": "",
+        "generateNext": true
+    },
+    {
+        "id": "ssd_global_middleware_start_id",
+        "type": "GlobalMiddlewareStart",
+        "z": "ssd_mw_ws",
+        "viewType": "server",
+        "nodeType": "flow",
+        "inputs": 0,
+        "outputs": 1,
+        "category": "Middleware",
+        "__n_excludedFromValidation__": {},
+        "x": 165,
+        "y": 100,
+        "wires": [
+            [
+                "sd_rnBLXiy6UsVrFxWU"
+            ]
+        ],
+        "generateNext": true
+    },
+    {
+        "id": "ssd_global_next_id",
+        "type": "GlobalNext",
+        "z": "ssd_mw_ws",
+        "viewType": "server",
+        "nodeType": "flow",
+        "inputs": 1,
+        "outputs": 1,
+        "category": "Middleware",
+        "__n_excludedFromValidation__": {},
+        "x": 474.1875,
+        "y": 103.90625,
+        "wires": [
+            [
+                "ssd_global_middleware_end_id"
+            ]
+        ],
+        "generateNext": true
+    },
+    {
+        "id": "ssd_global_middleware_end_id",
+        "type": "GlobalMiddlewareEnd",
+        "z": "ssd_mw_ws",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 0,
+        "category": "Middleware",
+        "__n_excludedFromValidation__": {},
+        "x": 657.84375,
+        "y": 102.8125,
+        "wires": [],
+        "generateNext": true
+    },
+    {
+        "id": "sd_rnBLXiy6UsVrFxWU",
+        "type": "CORS",
+        "z": "ssd_mw_ws",
+        "viewType": "server",
+        "nodeType": "middleware",
+        "name": "",
+        "methods": [],
+        "origin": true,
+        "editableListData": {
+            "methods": [],
+            "allowedHeaders": [],
+            "exposedHeaders": []
+        },
+        "showOriginToggleButton": true,
+        "credentials": false,
+        "maxAge": "",
+        "preflightContinue": false,
+        "optionsSuccessStatus": "",
+        "functionName": "sd_rnBLXiy6UsVrFxWU",
+        "category": "Global",
+        "__n_excludedFromValidation__": {},
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "ssd_global_next_id"
+            ]
+        ]
+    },
+    {
+        "id": "sd_4WxfjvuOk0r585XC",
+        "type": "RouteMiddlewareStart",
+        "z": "ssd_mw_ws",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "dirseq",
+        "inputs": 0,
+        "outputs": 1,
+        "category": "Middleware",
+        "__n_excludedFromValidation__": {},
+        "x": 225,
+        "y": 200,
+        "wires": [
+            [
+                "sd_clAatgaGTc6K98TZ"
+            ]
+        ],
+        "generateNext": true
+    },
+    {
+        "id": "sd_h3gtUm7Yf19M09lh",
+        "type": "RouteMiddlewareEnd",
+        "z": "ssd_mw_ws",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 0,
+        "category": "Middleware",
+        "__n_excludedFromValidation__": {},
+        "x": 505,
+        "y": 220,
+        "wires": [],
+        "generateNext": true
+    },
+    {
+        "id": "sd_MYs8naTI9jcDuNzd",
+        "type": "Next",
+        "z": "ssd_mw_ws",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "category": "Middleware",
+        "__n_excludedFromValidation__": {},
+        "x": 405,
+        "y": 160,
+        "wires": [
+            [
+                "sd_h3gtUm7Yf19M09lh"
+            ]
+        ],
+        "generateNext": true
+    },
+    {
+        "id": "sd_clAatgaGTc6K98TZ",
+        "type": "sampleserver:directorymiddleware",
+        "z": "ssd_mw_ws",
+        "viewType": "server",
+        "name": "sampleserver:directorymiddleware",
+        "inputs": 1,
+        "outputs": 1,
+        "category": "Service",
+        "__n_excludedFromValidation__": {},
+        "x": 305,
+        "y": 220,
+        "wires": [
+            [
+                "sd_MYs8naTI9jcDuNzd"
+            ]
+        ],
+        "generateNext": true
+    }
+]

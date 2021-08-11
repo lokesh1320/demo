@@ -1,0 +1,18 @@
+{
+    "en": {
+        "localeId": "en",
+        "localeName": "English",
+        "isDefaultLanguage": false,
+        "properties": {
+            "buttonname": "submit"
+        }
+    },
+    "ar": {
+        "localeId": "ar",
+        "localeName": "Arabic",
+        "isDefaultLanguage": true,
+        "properties": {
+            "buttonname": "إرسال"
+        }
+    }
+}

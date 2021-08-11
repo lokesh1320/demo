@@ -1,0 +1,8 @@
+{
+    "localeId": "en",
+    "localeName": "English",
+    "isDefaultLanguage": false,
+    "properties": {
+        "buttonname": "submit"
+    }
+}

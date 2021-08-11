@@ -1,0 +1,14 @@
+{
+    "appPageId": "dac19ad9-0fda-d567-8c97-7440718f323c",
+    "appPageName": "dialohboz",
+    "componentName": "dialohbozComponent",
+    "selectorName": "bh-dialohboz",
+    "htmlFileName": "dialohboz.template.html",
+    "tsFileName": "dialohboz.component.ts",
+    "createDate": "2021-08-11T11:46:07.630Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

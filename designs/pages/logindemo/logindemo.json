@@ -1,0 +1,14 @@
+{
+    "appPageId": "20e352cd-3a33-468a-d495-8a590d986094",
+    "appPageName": "logindemo",
+    "componentName": "logindemoComponent",
+    "selectorName": "bh-logindemo",
+    "htmlFileName": "logindemo.template.html",
+    "tsFileName": "logindemo.component.ts",
+    "createDate": "2021-07-27T12:34:56.412Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

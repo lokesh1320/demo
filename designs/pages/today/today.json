@@ -1,0 +1,14 @@
+{
+    "appPageId": "b753836e-7268-3b68-7f5c-4b65cb586d2c",
+    "appPageName": "today",
+    "componentName": "todayComponent",
+    "selectorName": "bh-today",
+    "htmlFileName": "today.template.html",
+    "tsFileName": "today.component.ts",
+    "createDate": "2021-08-09T09:52:08.335Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

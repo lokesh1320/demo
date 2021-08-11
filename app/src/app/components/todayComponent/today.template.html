@@ -1,0 +1,116 @@
+<div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+  <form [formGroup]="sample">
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="/MaterialIcons/1.jpg">
+      <div>
+        enter firstname
+        <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput [required]="false" formControlName="firstname">
+          <mat-error align="start" *ngIf="sample.controls.firstname.errors?.required">enter firstname</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        enter lastname
+        <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput [required]="false" formControlName="lastname">
+
+        </mat-form-field>
+      </div>
+      <bh-child [msgparent]="sample.value" *ngIf="show" (msgchild)="msgchild($event)"></bh-child><button mat-button color="accent" (click)="onclick()">Submit</button>
+      <mat-tab-group mat-align-tabs="start" color="accent">
+        <mat-tab label="New Tab">
+          <mat-horizontal-stepper>
+            <mat-step>
+              <div fxLayout="row wrap" class="rowclass" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="row wrap" fxFlex="20" fxLayoutAlign="space-around stretch" [fxShow]="true" [fxHide]="false"><button mat-button color="accent">Button</button><button mat-button color="accent">Button</button></div>
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button matStepperNext="matStepperNext">Click</button></div>
+                <div fxLayout="row wrap" fxFlex="80" fxLayoutAlign="space-around stretch" [fxShow]="true" [fxHide]="false"><button mat-button color="primary">Button</button><button mat-button color="primary">Button</button></div>
+              </div>
+            </mat-step>
+            <mat-step>
+              <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false"><button mat-button>{{locales.buttonname}}</button></div>
+              <mat-form-field [appearance]="&apos;legacy&apos;">
+                <input matInput placeholder="Date Picker" [matDatepicker]="picker" [required]="false" [disabled]="false">
+                <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+                <mat-datepicker #picker [disabled]="false" [opened]="true"></mat-datepicker>
+
+              </mat-form-field><button mat-button matStepperPrevious="matStepperPrevious">back</button>
+            </mat-step>
+            <mat-step></mat-step>
+          </mat-horizontal-stepper>
+        </mat-tab>
+        <mat-tab label="New Tab">
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+
+                <mat-panel-title>
+                  Experiments
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div>
+                  <mat-checkbox value="check1" [required]="false"></mat-checkbox>check1
+                </div>
+                <div>
+                  <mat-checkbox [checked]="true" value="check2" [required]="false"></mat-checkbox>check2
+                </div>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-tab>
+        <mat-tab label="New Tab">
+          <mat-card>
+            <mat-card-title align="center">Blog</mat-card-title>
+
+            <mat-card-subtitle align="center">DBZ</mat-card-subtitle>
+
+            <img mat-card-image imgSrc="/MaterialIcons/1.jpg">
+
+            <mat-card-content align="center">
+              <div>
+                contentsYou must have heard about the self-driving cars in which the passenger can fully depend on the car for traveling. But to achieve level 5 autonomous, it is necessary for vehicles to understand and follow all traffic rules.
+
+                In the world of Artificial Intelligence and advancement in technologies, many researchers and big companies like Tesla, Uber, Google, Mercedes-Benz, Toyota, Ford, Audi, etc are working on autonomous vehicles and self-driving cars. So, for achieving accuracy in this technology, the vehicles should be able to interpret traffic signs and make decisions accordingly.
+
+                This is the 8th project of DataFlair&#x2019;s series of 20 Python projects. I recommend you to bookmark the previous projects:
+
+                Fake News Detection Python Project
+                Parkinson&#x2019;s Disease Detection Python Project
+                Color Detection Python Project
+                Speech Emotion Recognition Python Project
+                Breast Cancer Classification Python Project
+                Age and Gender Detection Python Project
+                Handwritten Digit Recognition Python Project
+                Chatbot Python Project
+                Driver Drowsiness Detection Python Project
+                Traffic Signs Recognition Python Project
+                Image Caption Generator Python Project
+              </div>
+            </mat-card-content>
+
+            <mat-card-actions align="center"></mat-card-actions>
+          </mat-card>
+        </mat-tab>
+        <mat-tab label="New Tab">
+          <mat-slider invert="false" max="100" min="10" step="50" (change)=" valueChange()"> </mat-slider>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div>
+              <mat-radio-button [required]="false" value="male" (change)="onselect(&apos;male&apos;)"></mat-radio-button>Male
+            </div>
+            <div>
+              <mat-radio-button [value]="female" [required]="false" value="female" (change)="onselect(&apos;female&apos;)" [checked]="false"></mat-radio-button>Female
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="New Tab">
+          <mat-slide-toggle [required]="false" (change)="changed()"> on/off</mat-slide-toggle>
+          <mat-progress-bar [mode]="&apos;determinate&apos;" color="accent" value="55" (animationEnd)="animation()"></mat-progress-bar><button mat-mini-fab color="accent" (click)="clickEvent()">
+            <mat-icon>decorate</mat-icon>
+          </button>
+          <mat-progress-spinner style="background: orange" class="class1" [mode]="&apos;indeterminate&apos;" color="accent" strokeWidth="10"></mat-progress-spinner>
+        </mat-tab>
+        <mat-tab label="New Tab"></mat-tab>
+      </mat-tab-group>
+    </div>
+  </form>
+</div>

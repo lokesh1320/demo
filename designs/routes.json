@@ -1,0 +1,38 @@
+{
+    "routes": [
+        {
+            "path": "login",
+            "component": "loginComponent"
+        },
+        {
+            "path": "home",
+            "component": "homeComponent"
+        },
+        {
+            "path": "test",
+            "component": "testComponent"
+        },
+        {
+            "path": "demo",
+            "component": "demoComponent"
+        },
+        {
+            "component": "logindemoComponent",
+            "path": "logindemo"
+        },
+        {
+            "component": "todayComponent",
+            "path": "today"
+        },
+        {
+            "path": "''",
+            "redirectTo": "login",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

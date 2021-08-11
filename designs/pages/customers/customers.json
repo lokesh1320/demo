@@ -1,0 +1,14 @@
+{
+    "appPageId": "662903fc-6b43-974f-2f5b-306e98350c0e",
+    "appPageName": "customers",
+    "componentName": "customersComponent",
+    "selectorName": "bh-customers",
+    "htmlFileName": "customers.template.html",
+    "tsFileName": "customers.component.ts",
+    "createDate": "2021-08-11T11:56:18.257Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}
